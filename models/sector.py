@@ -3,5 +3,5 @@ from typing import Optional
 
 class Sector(BaseModel):
     id : Optional[str] = None
-    name : str
+    name : Optional[str] = None
     field : Optional[str] = None

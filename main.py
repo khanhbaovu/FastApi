@@ -24,8 +24,13 @@ async def insertSector(sector : Sector):
     return service.insert(newSector)
 
 @app.put("/update/{id}")
-async def updateSector(id: str):
-    pass
+async def updateSector(sector : Sector):
+    updatedSector = {
+      "id" : sector.id,
+      "name" : sector.name,
+      "field" : sector.field
+    }
+    return service.insert(updatedSector)
 
 @app.delete("/delete/{id}")
 async def deleteSector(id : str):
